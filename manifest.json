@@ -1,0 +1,9 @@
+{
+  "name": "Kaprekar 6174",
+  "short_name": "Kaprekar",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#4CAF50",
+  "icons": []
+}

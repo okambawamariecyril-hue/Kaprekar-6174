@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#1d3557">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Kaprekar 6174</title>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <button id="theme" class="petit-bouton">🌙</button>
+    </div>
+
+    <main class="conteneur">
+
+        <div class="hero">
+            <div class="icone">∞</div>
+
+            <h1>Kaprekar 6174</h1>
+
+            <p>
+                Explore la mystérieuse constante de Kaprekar.
+            </p>
+
+            <div class="badge">
+                CONSTANTE : 6174
+            </div>
+        </div>
+
+        <section class="calculateur">
+
+            <label for="nombre">
+                Entre un nombre à 4 chiffres
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                inputmode="numeric"
+                maxlength="4"
+                placeholder="Ex : 3524"
+            >
+
+            <div class="boutons">
+
+                <button id="calculer">
+                    ⚡ Calculer
+                </button>
+
+                <button id="demo" class="secondaire">
+                    🎯 Démo
+                </button>
+
+                <button id="aleatoire" class="secondaire">
+                    🎲 Aléatoire
+                </button>
+
+                <button id="reset" class="secondaire">
+                    🔄 Réinitialiser
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="stats">
+
+            <div class="stat">
+                <span id="totalCalculs">0</span>
+                <small>Calculs</small>
+            </div>
+
+            <div class="stat">
+                <span id="moyenneEtapes">0</span>
+                <small>Moyenne</small>
+            </div>
+
+            <div class="stat">
+                <span id="recordEtapes">0</span>
+                <small>Record</small>
+            </div>
+
+        </section>
+
+        <div id="compteur"></div>
+
+        <section id="resultat"></section>
+
+        <section class="info">
+
+            <h2>🧠 Comment fonctionne Kaprekar ?</h2>
+
+            <p>
+                On prend les quatre chiffres d'un nombre.
+                On les range du plus grand au plus petit,
+                puis du plus petit au plus grand.
+            </p>
+
+            <p>
+                On soustrait le plus petit nombre du plus grand
+                et on recommence avec le résultat.
+            </p>
+
+            <div class="formule">
+                Nombre décroissant − Nombre croissant
+            </div>
+
+            <p>
+                Pour les nombres à quatre chiffres contenant
+                au moins deux chiffres différents, on atteint
+                généralement <strong>6174</strong>.
+            </p>
+
+            <p>
+                C'est la célèbre constante de Kaprekar.
+            </p>
+
+        </section>
+
+        <section class="historique-section">
+
+            <h2>📜 Historique</h2>
+
+            <div id="historique"></div>
+
+            <button id="effacerHistorique" class="danger">
+                Effacer l'historique
+            </button>
+
+        </section>
+
+        <section class="tests-section">
+
+            <h2>🧪 Vérification</h2>
+
+            <button id="tests" class="secondaire">
+                Lancer les tests
+            </button>
+
+            <div id="testsResultat"></div>
+
+        </section>
+
+        <footer>
+            <p>
+                Kaprekar 6174 • Projet personnel
+            </p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
