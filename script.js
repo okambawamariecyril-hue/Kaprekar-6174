@@ -583,3 +583,48 @@ if ("serviceWorker" in navigator) {
         }
     );
 }
+// ================================
+// PARTAGE
+// ================================
+
+let partager = document.getElementById("partager");
+
+partager.addEventListener("click", async function() {
+
+    let lien = window.location.href;
+
+    if (navigator.share) {
+
+        try {
+
+            await navigator.share({
+                title: "Kaprekar 6174",
+                text: "Découvre mon calculateur de la constante de Kaprekar 6174 !",
+                url: lien
+            });
+
+        } catch (erreur) {
+
+            console.log("Partage annulé.");
+
+        }
+
+    } else {
+
+        try {
+
+            await navigator.clipboard.writeText(lien);
+
+            partager.textContent = "✅ Lien copié !";
+
+            setTimeout(function() {
+                partager.textContent = "📤 Partager";
+            }, 2000);
+
+        } catch (erreur) {
+
+            alert("Impossible de copier le lien.");
+
+        }
+    }
+});
